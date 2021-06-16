@@ -1,3 +1,11 @@
-export MYZS_PLUGIN_NAME="" # Add plugin name
-export MYZS_PLUGIN_VERSION="v0.0.0-development"
-export MYZS_PLUGIN_CHANGELOG="" # Add current changes description
+_myzs:internal:hook:before-plugin() {
+  _myzs:internal:log:debug "before loading plugins"
+}
+
+_myzs:internal:hook:after-plugin() {
+  _myzs:internal:log:debug "after loading plugins"
+}
+
+_myzs:internal:hook:cleanup() {
+  _myzs:internal:log:debug "cleanup <template> plugins"
+}
